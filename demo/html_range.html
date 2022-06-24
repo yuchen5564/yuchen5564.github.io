@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello</title>
+</head>
+
+<body>
+    <!--註解在這裡-->
+    <h1 id="title">Hello</h1>
+    <input type="range" id="red" min="0" max="255" oninput="changeValue()">
+    <input type="range" id="green" min="0" max="255" oninput="changeValue()">
+    <input type="range" id="blue" min="0" max="255" oninput="changeValue()">
+    
+<script>
+    function changeValue() {
+        var redV = document.getElementById("red").value;
+        var greenV = document.getElementById("green").value;
+        var blueV = document.getElementById("blue").value;
+        document.getElementById("title").style.background = `rgb(${redV},${greenV},${blueV})`;
+    }
+
+</script>
+</body>
+
+</html>
