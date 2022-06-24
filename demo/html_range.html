@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="../styles/basic_style.css">
     <title>HTML Range Demo</title>
 </head>
 
@@ -9,9 +10,9 @@
     <p><a href="../index.html"> Back to home page</a></p>
     <!--註解在這裡-->
     <h1 id="title">Background will change!</h1>
-    <input type="range" id="red" min="0" max="255" oninput="changeValue()">
-    <input type="range" id="green" min="0" max="255" oninput="changeValue()">
-    <input type="range" id="blue" min="0" max="255" oninput="changeValue()">
+    Red<input type="range" id="red" min="0" max="255" oninput="changeValue()">
+    Green<input type="range" id="green" min="0" max="255" oninput="changeValue()">
+    Blue<input type="range" id="blue" min="0" max="255" oninput="changeValue()">
     
 <script>
     function changeValue() {
