@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/basic_style.css">
+    <title>HTML Form Text Demo</title>
+</head>
+<body>
+    <p>&#x23EA <a href="../index.html"> Back to home page</a></p>
+    <h1>Hi! Nice to meet you!</h1>
+    <form>
+        <label for="formName">Your name</label>
+        <input type="text" id="formName" name="formName">
+        <input type="submit" id="submit" name="submit" value="Submit" onclick="showInformation()">
+    </form>
+    <script>
+        function showInformation() {
+            alert("Hi! " + document.getElementById("formName").value);
+        }
+    </script>
+</body>
+</html>
