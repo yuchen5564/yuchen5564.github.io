@@ -5,36 +5,50 @@
     <meta charset="unicode">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome~</title>
 </head>
 
 <style>
-    body{
+    body {
         background-color: black;
     }
-    h1{
+
+    h1 {
         font-size: 100px;
         font-family: Microsoft JhengHei;
         color: white;
-        text-align: center;
-        line-height: 550px; 
+        line-height: 550px;
     }
 </style>
 
 <body>
-    <h1><span id="text"></span></h1>
+    <center>
+        <h1><span id="text"></span></h1>
+    </center>
+
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+
 <script>
     //先取得網址字串，假設此頁網址為「index.aspx?id=U001&name=GQSM」
     var url = location.href;
 
     //再來用去尋找網址列中是否有資料傳遞(QueryString)
     if (url.indexOf('?') != -1) {
-        var ary =decodeURIComponent( url.split('?')[1]) ;
+        var ary = decodeURIComponent(url.split('?')[1]);
 
         document.getElementById('text').innerHTML = ary;
 
+    } else {
+        $.getJSON("https://api.ipify.org?format=json", function (data) {
+
+            // Setting text of element P with id gfg
+            $("#text").html(data.ip);
+        })
     }
+
 
 </script>
 
