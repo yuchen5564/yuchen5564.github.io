@@ -4,10 +4,16 @@
 <head>
     <title>Time</title>
 </head>
+
 <style>
+    @font-face {
+        font-family: "Comic";
+        src: url(../font/comic.ttf);
+    }
+
     h1 {
         text-align: center;
-        font-family: Comic Sans MS;
+        font-family: 'Comic';
         font-size: 120pt;
         height: 120pt;
     }
@@ -15,17 +21,24 @@
     h2 {
         text-align: center;
         color: dimgray;
-        font-family: Comic Sans MS;
+        font-family: 'Comic';
         font-size: 90pt;
         height: 90pt;
     }
 
+    
 </style>
 
 <body bgcolor="eff0eb">
-    <div><h2>Now Time</h2></div>
-    <div><h1><span id="time"> </span></h1></div>
-    <div><h2><span id="text"> </span></h2></div>
+    <div>
+        <h2>Now Time</h2>
+    </div>
+    <div>
+        <h1><span id="time"> </span></h1>
+    </div>
+    <div>
+        <h2><span id="text"> </span></h2>
+    </div>
 </body>
 <script>
     function refreshTime() {
