@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulletin with Google Sheets</title>
+</head>
+<style>
+    body {
+        font-family: Microsoft JhengHei;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 25px;
+    }
+
+    h4 {
+        color: rgb(16, 127, 175);
+        font-size: 20px;
+    }
+
+    .accordions {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .accordion {
+        width: 100%;
+        color: white;
+        overflow: hidden;
+    }
+
+    .acc-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        background: #1363DF;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .accordion:first-child {
+        border-bottom: 1px solid;
+    }
+
+    .acc-label:hover {
+        background: #47B5FF;
+    }
+
+    .acc-label::after {
+        content: ">";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+
+    .acc-content {
+        max-height: 0;
+        padding: 0 1em;
+        color: #2c3e50;
+        background: #DFF6FF;
+        transition: all 0.4s ease;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    input:checked+.acc-label::after {
+        transform: rotate(90deg);
+    }
+
+    input:checked~.acc-content {
+        max-height: 100vh;
+        padding: 1em;
+    }
+</style>
+
+<body>
+    <section class="js-append-card"></section>
+    <script>
+        fetch('https://sheets.googleapis.com/v4/spreadsheets/1P8MARSkyCKGmvTSQEGXrBsp85YgQ_g8UwOywfz9MpGc/values/sheet1?alt=json&key=AIzaSyATQmit8WovLGaNLrT5Fam5ynPLqX6U2Kk')
+            .then(res => res.json())
+            .then(res => {
+                console.log(res);
+                const data = res.values;
+                console.log(data);
+
+                // 刪除第一個陣列
+                data.shift();
+                Array.prototype.forEach.call(data, d => {
+                    let Card = `
+                    <div class="container">
+        <div class="accordions">
+            <div class="accordion">
+                <input type="checkbox" id="${d[0]}">
+                <label class="acc-label" for="${d[0]}">【${d[1]}】${d[2]}</label>
+                <div class="acc-content">
+                    ${d[3]}
+                </div>
+            </div>`;
+                    document.querySelector('.js-append-card').insertAdjacentHTML('afterbegin', Card);
+                })
+            })
+    </script>
+</body>
+
+</html>
+
+
+
+<!--
+    https://sheets.googleapis.com/v4/spreadsheets/1P8MARSkyCKGmvTSQEGXrBsp85YgQ_g8UwOywfz9MpGc/values/sheet1?alt=json&key=AIzaSyATQmit8WovLGaNLrT5Fam5ynPLqX6U2Kk
+-->

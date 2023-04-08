@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hover Card</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        background: #fff;
+    }
+
+    .box {
+        height: 200px;
+        width: 250px;
+        background: #2753ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .box:after {
+        content: "";
+        background: rgb(0, 12, 12);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.6s ease 0s;
+    }
+
+    .box:hover:after {
+        opacity: 0.7;
+    }
+
+    .box h1 {
+        color: white;
+        font-size: 40px;
+        transition: all 0.5s ease 0s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .box:hover h1 {
+        transform: translateY(-20px);
+    }
+
+    .box button {
+        position: absolute;
+        margin-top: 90px;
+        border: none;
+        background: none;
+        color: #fff;
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+        z-index: 1;
+    }
+
+    .box button span {
+        display: block;
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        cursor: pointer;
+    }
+
+    .box button>span:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 20px;
+        height: 0;
+        border: 2px solid #fff;
+        border-left: none;
+        border-bottom: none;
+        transition: height 0.15s ease-out,
+            width 0.15s ease-out 0.15s;
+    }
+
+    .box:hover button>span:after {
+        width: 50%;
+        height: calc(100% -2px);
+        transition: width 0.15s ease-out,
+            height 0.15s ease-out 0.15s;
+    }
+
+    .box button>span:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: 20px;
+        height: 0;
+        border: 2px solid #fff;
+        border-right: none;
+        border-bottom: none;
+        transition: height 0.15s ease-out,
+            width 0.15s ease-out 0.15s;
+    }
+
+    .box:hover button>span:before {
+        width: calc(50% - 1px);
+        height: calc(100% -2px);
+        transition: width 0.15s ease-out,
+            height 0.15s ease-out 0.15s;
+    }
+
+    .box button>span>span:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .box:hover button>span>span:before {
+        opacity: 1;
+        border-bottom: 2px solid #fff;
+        width: 50%;
+        height: 1px;
+        transition: opacity 0s ease-out 0.29s,
+            width 0.15s ease-out 0.3s;
+    }
+
+    .box button>span>span:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .box:hover button>span>span:after {
+        opacity: 1;
+        border-bottom: 2px solid white;
+        width: calc(50%);
+        height: 1px;
+        transition: opacity 0s ease-out 0.29s,
+            width 0.15s ease-out 0.3s;
+    }
+
+    .box button>span>span {
+        transition: color 0.2s linear;
+        color: transparent;
+    }
+
+    .box:hover button>span>span {
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Title</h1>
+            <button>
+                <span>
+                    <span>Click</span>
+                </span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
