@@ -515,15 +515,15 @@ a:hover {
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
-    left: 100%;
-    border-left-color: var(--bg-white);
-    border-right: none;
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
     right: 100%;
     border-right-color: var(--bg-white);
     border-left: none;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: 100%;
+    border-left-color: var(--bg-white);
+    border-right: none;
 }
 
 .timeline-content h3 {
@@ -787,10 +787,10 @@ a:hover {
     }
     
     .timeline-item .timeline-content::before {
-        right: 100% !important;
-        left: auto !important;
-        border-right-color: var(--bg-white) !important;
-        border-left: none !important;
+        left: 100% !important;
+        right: auto !important;
+        border-left-color: var(--bg-white) !important;
+        border-right: none !important;
     }
     
     .timeline-marker {
