@@ -1,219 +1,344 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Merlin Kuo</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Chen Kuo - Personal Portfolio</title>
+    <link rel="stylesheet" href="assets/css/modern.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="is-preload">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Yu-Chen Kuo</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/yc.jpg" alt="" /></a>
-			<h1><strong>Yu Chen Kuo</strong></h1>
-			<i>
-				<h1>Hard work will tell lies,</br>but not in vain.</h1></br>
-			</i>
-			<h3>
-				<a href="#about">About me</a>　</br>
-				<a href="#edu">Education</a>　</br>
-				<a href="#exp">Experience</a>　</br>
-				<a href="#skill">Skill</a>　</br>
-				<a href="#interest">Interest</a>　</br>
-				<a href="#portfolio">Side Project</a>　</br>
-			</h3>
-		</div>
-	</header>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="images/yc.jpg" alt="Yu-Chen Kuo">
+                </div>
+                <h1 class="hero-title">Yu-Chen Kuo</h1>
+                <p class="hero-subtitle">Hard work will tell lies, but not in vain.</p>
+                <div class="hero-buttons">
+                    <a href="file/cv.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Main -->
-	<div id="main">
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About me...</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <p>Hi! I'm <a href="file/cv.pdf" target="_blank">Yu-Chen Kuo</a>.</p>
+                <p>Graduate Student at National Taiwan University of Science and Technology (Taiwan Tech).<br>
+                Major in Computer Science and Information Engineering (CSIE).</p>
+            </div>
+        </div>
+    </section>
 
-		<!-- One -->
-		<section id="about">
-			<header class="major">
-				<h2>About me...</h2>
-			</header>
-			<h3>Hi! I'm <a href="file/cv.pdf">Yu Chen Kuo</a>.</br></br>
-				Graduate Student at National Taiwan University of Science and Technology (Taiwan Tech).</br>
-				Major in Computer Science and Information Engineering (CSIE).</h3>
-		</section>
+    <!-- Education Section -->
+    <section id="education" class="section section-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>MS: National Taiwan University of Science and Technology (Taiwan Tech)</h3>
+                        <p class="timeline-date">2025.01~now</p>
+                        <p>Computer Science and Information Engineering</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>BS: National Taiwan University of Science and Technology (Taiwan Tech)</h3>
+                        <p class="timeline-date">2021.09~2025.01</p>
+                        <p>Computer Science and Information Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Two -->
-		<section id="edu">
-			<header class="major">
-				<h2>Education</h2>
-			</header>
-			<h3>
-				<li>MS: National Taiwan University of Science and Technology (Taiwan Tech)</li>
-				<p>　2025.01~now, Computer Science and Information Engineering</p>
-			</h3>
-			<h3>
-				<li>BS: National Taiwan University of Science and Technology (Taiwan Tech)</li>
-				<p>　2021.09~2025.01, Computer Science and Information Engineering</p>
-			</h3>
-		</section>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>NTUST Computer Center</h3>
+                        <p class="timeline-date">2023.02~now</p>
+                        <p>Computer Classroom Service Desk (Part-Time)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>CDNCloud Inc.</h3>
+                        <p class="timeline-date">2024.03~2025.03</p>
+                        <p>NOC Technician / Operation Engineer (Intern)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>3D Printing Teaching Camp</h3>
+                        <p class="timeline-date">2023.07~2024.01</p>
+                        <p>Student Volunteer</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Google Developer Student Clubs of NTUST</h3>
+                        <p class="timeline-date">2022.10~2023.07</p>
+                        <p>Core Team Member</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>NTUST CSIE Student Association</h3>
+                        <p class="timeline-date">2022.08~2023.06</p>
+                        <p>Coordinator & Photographer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<section id="exp">
-			<header class="major">
-				<h2>Experience</h2>
-			</header>
-			<h3>
-				<li>NTUST Computer Center</li>
-				<p>　2023.02~now, Computer Classroom Service Desk (Part-Time)</p>
-			</h3>
-			<h3>
-				<li>CDNCloud Inc.</li>
-				<p>　2024.03~2025.03, NOC Technician / Operation Engineer (Intern)</p>
-			</h3>
-			<h3>
-				<li>3D Printing Teaching Camp</li>
-				<p>　2023.07~2024.01, Student Volunteer</p>
-			</h3>
-			<h3>
-				<li>Google Developer Student Clubs of NTUST</li>
-				<p>　2022.10~2023.07, Core Team Member</p>
-			</h3>
-			<h3>
-				<li>NTUST CSIE Student Association</li>
-				<p>　2022.08~2023.06, Coordinator & Photographer</p>
-			</h3>
-		</section>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-cuttlefish"></i>
+                    <span>C/C++</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-microchip"></i>
+                    <span>Arduino</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python(a little)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-google"></i>
+                    <span>Google App Script</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Three -->
-		<section id="skill">
-			<header class="major">
-				<h2>Skill</h2>
-			</header>
-			<h3>
-				<ul>
-					<li>C/C++</li>
-					<li>Arduino</li>
-					<li>Linux</li>
-					<li>Python(a little)</li>
-					<li>Google App Script</li>
-				</ul>
-			</h3>
-		</section>
+    <!-- Interests Section -->
+    <section id="interests" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interest</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <i class="fas fa-code"></i>
+                    <span>Coding</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-camera"></i>
+                    <span>Photography</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-film"></i>
+                    <span>Movie Watching</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Four -->
-		<section id="interest">
-			<header class="major">
-				<h2>Interest</h2>
-			</header>
-			<h3>
-				💻Coding　</br>
-				📸Photography　</br>
-				🎥Movie Watching　
-			</h3>
-		</section>
+    <!-- Projects Section -->
+    <section id="projects" class="section section-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Side Project</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>台科新生懶人包 For Freshman in NTUST</h3>
+                        <div class="project-links">
+                            <a href="https://ntust.merlinkuo.tw/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Short URL System</h3>
+                        <div class="project-links">
+                            <a href="https://s.merlinkuo.tw/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                            <a href="https://github.com/yuchen5564/short-url-system" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Current Time (with Text Editor)</h3>
+                        <div class="project-links">
+                            <a href="https://time.merlinkuo.tw/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Simple Countdown Timer</h3>
+                        <div class="project-links">
+                            <a href="https://countdown.merlinkuo.tw/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Bulletin System</h3>
+                        <div class="project-links">
+                            <a href="https://bulletin.merlinkuo.tw/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Attendance System</h3>
+                        <div class="project-links">
+                            <a href="https://hrsys.merlinkuo.tw/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                            <a href="https://github.com/yuchen5564/attendance-system" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="social-links">
+                    <a href="https://blog.merlinkuo.tw" class="social-link" target="_blank">
+                        <i class="far fa-file-alt"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="https://www.instagram.com/merlin_kuo" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.github.com/yuchen5564" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.facebook.com/yu.chen.kuo.0430" class="social-link" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yuchen5564" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:me@merlinkuo.tw" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Five -->
-		<section id="portfolio">
-			<header class="major">
-				<h2>Side Project</h2>
-			</header>
-			<h3>
-				<ul>
-					<li>
-						<a href="https://ntust.merlinkuo.tw/" target="_blank">台科新生懶人包 For Freshman in NTUST</a>
-					</li>
-				</ul>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Merlin Kuo. All rights reserved.</p>
+                <p>Made with ❤️ using modern web technologies</p>
+            </div>
+        </div>
+    </footer>
 
-			</h3>
-
-			<h3>
-				<ul>
-					<li>
-						<a href="https://s.merlinkuo.tw/" target="_blank">Short URL System</a>
-						<a href="https://github.com/yuchen5564/short-url-system" target="_blank">(GitHub)</a>
-					</li>
-				</ul>
-
-			</h3>
-			<h3>
-				<ul>
-					<li>
-						<a href="https://time.merlinkuo.tw/" target="_blank">Current Time (with Text Editor)</a>
-					</li>
-				</ul>
-
-			</h3>
-			<h3>
-				<ul>
-					<li>
-						<a href="https://countdown.merlinkuo.tw/" target="_blank">Simple Countdown Timer</a>
-					</li>
-				</ul>
-
-			</h3>
-			<h3>
-				<ul>
-					<li>
-						<a href="https://bulletin.merlinkuo.tw/" target="_blank">Bulletin System</a>
-					</li>
-				</ul>
-
-			</h3>
-			<h3>
-				<ul>
-					<li>
-						<a href="https://hrsys.merlinkuo.tw/" target="_blank">Attendance System</a>
-						<a href="https://github.com/yuchen5564/attendance-system" target="_blank">(GitHub)</a>
-					</li>
-				</ul>
-
-			</h3>
-
-		</section>
-
-	</div>
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="https://blog.merlinkuo.tw" class="icon far fa-file-alt"><span class="label">My
-							Blog</span></a></li>
-				<li><a href="https://www.instagram.com/merlin_kuo" class="icon brands fa-instagram"><span
-							class="label">Instagram</span></a></li>
-				<li><a href="https://www.github.com/yuchen5564" class="icon brands fa-github"><span
-							class="label">Github</span></a></li>
-				<li><a href="https://www.facebook.com/yu.chen.kuo.0430" class="icon brands fa-facebook"><span
-							class="label">Facebook</span></a></li>
-				<li><a href="https://www.linkedin.com/in/yuchen5564" class="icon brands fa-linkedin"><span
-							class="label">Email</span></a>
-				</li>
-				<li><a href="mailto:me@merlinkuo.tw" class="icon solid fa-envelope"><span class="label">Email</span></a>
-				</li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Merlin Kuo</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<!-- Cloudflare Web Analytics -->
-	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6ce335740cae4f0281f33992b24e8420"}'></script>
-	<!-- End Cloudflare Web Analytics -->
-
+    <!-- Scripts -->
+    <script src="assets/js/modern.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6ce335740cae4f0281f33992b24e8420"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
