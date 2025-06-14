@@ -219,7 +219,11 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>台科新生懶人包 For Freshman in NTUST</h3>
+                        <p class="project-description">為台科大新生提供全方位入學指南的網站，幫助新生快速適應大學生活。</p>
                         <div class="project-links">
+                            <button class="project-link project-details-btn" data-project="ntust-freshman">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                             <a href="https://ntust.merlinkuo.tw/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Visit
                             </a>
@@ -229,7 +233,11 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Short URL System</h3>
+                        <p class="project-description">功能完整的短網址服務系統，提供網址縮短、統計分析等功能。</p>
                         <div class="project-links">
+                            <button class="project-link project-details-btn" data-project="short-url">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                             <a href="https://s.merlinkuo.tw/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Visit
                             </a>
@@ -242,9 +250,16 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Current Time (with Text Editor)</h3>
+                        <p class="project-description">結合時間顯示與文字編輯功能的實用工具網站。</p>
                         <div class="project-links">
+                            <button class="project-link project-details-btn" data-project="current-time">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                             <a href="https://time.merlinkuo.tw/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                            <a href="https://github.com/yuchen5564/time" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -252,9 +267,16 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Simple Countdown Timer</h3>
+                        <p class="project-description">簡潔易用的倒數計時器，支援多種計時模式。</p>
                         <div class="project-links">
+                            <button class="project-link project-details-btn" data-project="countdown-timer">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                             <a href="https://countdown.merlinkuo.tw/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                            <a href="https://github.com/yuchen5564/countdown-timer" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -262,9 +284,16 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Bulletin System</h3>
+                        <p class="project-description">簡單高效的公告管理系統，適合小型組織使用。</p>
                         <div class="project-links">
+                            <button class="project-link project-details-btn" data-project="bulletin-system">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                             <a href="https://bulletin.merlinkuo.tw/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                            <a href="https://github.com/yuchen5564/bulletin-system" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -272,7 +301,11 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Attendance System</h3>
+                        <p class="project-description">功能完善的出勤管理系統，提供打卡、統計、報表等功能。</p>
                         <div class="project-links">
+                            <button class="project-link project-details-btn" data-project="attendance-system">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                             <a href="https://hrsys.merlinkuo.tw/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Visit
                             </a>
@@ -324,6 +357,21 @@
         </div>
     </section>
 
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Project Details</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modal-project-content">
+                    <!-- Project details will be inserted here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -335,6 +383,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/projectData.js"></script>
     <script src="assets/js/modern.js"></script>
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6ce335740cae4f0281f33992b24e8420"}'></script>

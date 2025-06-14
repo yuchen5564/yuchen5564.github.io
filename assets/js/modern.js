@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initSmoothScrolling();
     initScrollSpy();
+    initProjectModal();
     
     // Initialize parallax after a small delay to ensure styles are applied
     setTimeout(() => {
@@ -692,6 +693,95 @@ function initTimelineItemClick() {
 document.addEventListener('DOMContentLoaded', function() {
     initTimelineItemClick();
 });
+
+// Project Modal functionality
+function initProjectModal() {
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-project-content');
+    const closeBtn = document.querySelector('.modal-close');
+    const detailButtons = document.querySelectorAll('.project-details-btn');
+
+    // Note: Project data is now loaded from projectData.js
+
+    // Open modal
+    function openModal(projectId) {
+        const project = projectData[projectId];
+        if (!project) return;
+
+        modalTitle.textContent = project.title;
+        
+        // Build modal content
+        modalContent.innerHTML = `
+            <div class="project-detail">
+                <h3><i class="fas fa-info-circle"></i> Overview</h3>
+                <p>${project.details}</p>
+            </div>
+            
+            <div class="project-detail">
+                <h3><i class="fas fa-star"></i> Key Features</h3>
+                <ul>
+                    ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                </ul>
+            </div>
+            
+            <div class="project-detail">
+                <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                <div class="project-tech-stack">
+                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+            </div>
+            
+            <div class="project-detail">
+                <h3><i class="fas fa-link"></i> Links</h3>
+                <div class="project-links-modal">
+                    ${project.links.map(link => `
+                        <a href="${link.url}" target="_blank" class="project-link-modal">
+                            <i class="${link.icon}"></i> ${link.type === 'visit' ? 'Visit Site' : 'GitHub'}
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        
+        // Track modal open event
+        trackEvent('project_modal_open', { project: project.title });
+    }
+
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners
+    detailButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectId = btn.getAttribute('data-project');
+            openModal(projectId);
+        });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+}
 
 // Console message for developers
 console.log('%c👋 Hello Developer!', 'color: #667eea; font-size: 16px; font-weight: bold;');
